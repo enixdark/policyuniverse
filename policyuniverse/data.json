@@ -41164,7 +41164,8 @@
         "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
-          "aws:TagKeys"
+          "aws:TagKeys",
+          "elasticfilesystem:Encrypted"
         ],
         "description": "Creates a new, empty file system.",
         "docs": {
@@ -78821,7 +78822,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Grants permission to create an AWS account that is automatically a member of the organization with the credentials that made the request.",
         "docs": {
           "api_doc": "",
@@ -78834,7 +78838,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Grants permission to create an AWS GovCloud (US) account.",
         "docs": {
           "api_doc": "",
@@ -78860,7 +78867,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Grants permission to create an organizational unit (OU) within a root or parent OU.",
         "docs": {
           "api_doc": "",
@@ -78874,6 +78884,8 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
           "organizations:PolicyType"
         ],
         "description": "Grants permission to create a policy that you can attach to a root, an organizational unit (OU), or an individual AWS account.",
@@ -79147,7 +79159,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Grants permission to send an invitation to another AWS account, asking it to join your organization as a member account.",
         "docs": {
           "api_doc": "",
@@ -79463,7 +79478,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Tagging",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Grants permission to add one or more tags to the specified resource.",
         "docs": {
           "api_doc": "",
@@ -79477,7 +79495,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Tagging",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:TagKeys"
+        ],
         "description": "Grants permission to remove one or more tags from the specified resource.",
         "docs": {
           "api_doc": "",
@@ -79524,7 +79544,7 @@
       "api_reference_doc_page": "https://docs.aws.amazon.com/organizations/latest/APIReference/",
       "authz_doc_page": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_permissions.html",
       "concepts_doc_root": "https://docs.aws.amazon.com/organizations/latest/userguide/",
-      "context_keys_doc_root": "${ActionsDocRoot}"
+      "context_keys_doc_root": "https://docs.aws.amazon.com/organizations/latest/userguide/"
     },
     "prefix": "organizations"
   },
